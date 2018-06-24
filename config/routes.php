@@ -52,7 +52,24 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-   $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+
+
+
+  // $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']); --> This is main route of cake php file
+
+
+/*This all for testing route and understand routing system of cake php
+
+*****
+
+    Modified By Bahlul Siddiquee Tausif
+    Software Engineer Of SJInnovation
+
+*/
+
+   // $routes->connect('/', ['controller' => 'projectcake', 'action' => 'add']);
+
+    $routes -> connect('/', ['controller' => 'projectcake', 'action' => 'add']);
 
     //For user controllers we use this routes after users controllers active
     //$routes->connect('/',['controller' => 'Users', 'action' => 'login']);
