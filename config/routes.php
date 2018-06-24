@@ -69,7 +69,11 @@ Router::scope('/', function (RouteBuilder $routes) {
 
    // $routes->connect('/', ['controller' => 'projectcake', 'action' => 'add']);
 
-    $routes -> connect('/', ['controller' => 'projectcake', 'action' => 'add']);
+   // $routes -> connect('/', ['controller' => 'projectcake', 'action' => 'add']);
+
+
+//For user login route functionality
+    $routes -> connect('/', ['controller' => 'projectcake', 'action' => 'login']);
 
     //For user controllers we use this routes after users controllers active
     //$routes->connect('/',['controller' => 'Users', 'action' => 'login']);

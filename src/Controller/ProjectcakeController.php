@@ -104,4 +104,46 @@ class ProjectcakeController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+
+
+//For login form, we created a login controller for user login
+
+    /*
+    ** Modified By Bahlul Siddiquee Tausif
+        Software Engineer Of SJINNOVATION
+    **    
+    */
+
+    public function login()
+    {
+        //write login functionality in here
+    }
+
+
+//For signup form, we created a signup controller for user signup
+
+    /*
+    ** Modified By Bahlul Siddiquee Tausif
+        Software Engineer Of SJINNOVATION
+    **    
+    */
+
+     public function signup()
+    {
+        $projectcake = $this->Projectcake->newEntity();
+        if ($this->request->is('post')) {
+            $projectcake = $this->Projectcake->patchEntity($projectcake, $this->request->getData());
+            if ($this->Projectcake->save($projectcake)) {
+                $this->Flash->success(__('The projectcake has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The projectcake could not be saved. Please, try again.'));
+        }
+        $this->set(compact('projectcake'));
+    }
+
+
+
 }
